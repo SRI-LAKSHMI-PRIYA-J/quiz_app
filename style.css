@@ -1,0 +1,186 @@
+/* Reset and Global Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body Background with a Layered Gradient and Mountain Image */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Purple-to-reddish gradient overlaying the mountain image */
+  background: 
+    
+    url("https://img.freepik.com/free-psd/3d-rendering-questions-background_23-2151455632.jpg?semt=ais_hybrida") no-repeat center center/cover;
+}
+
+/* Each Page Container */
+.page {
+  display: none;
+  width: 100%;
+  max-width: 500px;  /* Design width */
+  max-height: 6500px;
+}
+.page.active {
+  display: block;
+}
+
+/* Glassy White Container (Wrapper) */
+.wrapper {
+  background: whitesmoke;  /* Semi‑opaque white */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #333;  /* Dark text for contrast */
+  border-radius: 15px;
+  padding: 40px 50px;
+  transition: transform 0.3s ease-in-out;
+  position: relative;  /* For positioning internal elements (like back arrow) */
+}
+.wrapper:hover {
+  transform: scale(1.05);
+}
+
+/* Headings inside the Container */
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  /* Optionally, you can add a subtle text shadow:
+     text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  */
+}
+
+/* Back Arrow for Subcategory Page */
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Button Styles – using a dark purple for a striking contrast */
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #8e44ad;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+  background: #732d91;
+  transform: translateY(-3px);
+}
+
+/* Button Groups (Vertical Stack) */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Centering Buttons (for Back buttons on pages like Review) */
+.center-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Navigation Buttons: Previous and Next Arranged Side by Side */
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Progress Bar Styling */
+#progressContainer {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+#progressBar {
+  background: #8e44ad;
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Quiz Question Text */
+#questionText {
+  margin-bottom: 20px;
+  text-align: left;
+  color: #333;
+}
+
+/* Options List Styling */
+#optionsList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+#optionsList li {
+  background: #f9f9f9;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-align: left;
+  color: #333;
+  border: 1px solid #ddd;
+}
+#optionsList li:hover {
+  background: #ececec;
+}
+#optionsList li.selected {
+  background: #dcdcdc;
+}
+
+/* Review Page Items */
+#reviewContainer {
+  text-align: left;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.review-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  color: #333;
+}
+.correct-answer {
+  color: #2ecc71;
+}
+.incorrect-answer {
+  color: #e74c3c;
+}
+/* For mobile devices */
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 20px;
+    max-width: 90%;
+  }
+  h1 {
+    font-size: 28px;
+  }
+}

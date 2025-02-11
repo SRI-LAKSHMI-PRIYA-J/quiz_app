@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glassy Purple Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Main Page: Category Selection -->
+  <div id="mainPage" class="page active">
+    <div class="wrapper">
+      <h1>Welcome to the Quiz App</h1>
+      <div class="button-group">
+        <button class="btn" data-category="general">General</button>
+        <button class="btn" data-category="technical">Technical</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subcategory Selection Page -->
+  <div id="subCategoryPage" class="page">
+    <div class="wrapper">
+      <!-- New Back Arrow at the top of the page -->
+      <div id="backArrow" class="back-arrow">&#8592;</div>
+      <h1>Select a Subcategory</h1>
+      <div class="button-group" id="subCategoryButtons">
+        <!-- Subcategory buttons will be generated dynamically -->
+      </div>
+      <!-- (Removed the previous Back button) -->
+    </div>
+  </div>
+
+  <!-- Quiz Page -->
+  <div id="quizPage" class="page">
+    <div class="wrapper">
+      <!-- Progress Bar -->
+      <div id="progressContainer">
+        <div id="progressBar"></div>
+      </div>
+      <!-- Question & Options -->
+      <div id="questionContainer">
+        <h2 id="questionText">Question Text</h2>
+        <ul id="optionsList">
+          <!-- Options will be generated dynamically -->
+        </ul>
+      </div>
+      <!-- Navigation Buttons: Previous and Next side by side -->
+      <div class="nav-buttons">
+        <button id="prevBtn" class="btn">Previous</button>
+        <button id="nextBtn" class="btn">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Result Page -->
+<div id="resultPage" class="page">
+  <div class="wrapper">
+    <h1>Quiz Completed!</h1>
+    <p>Your Score: <span id="scoreDisplay"></span> / 10</p>
+    <!-- New feedback message element -->
+    <p id="feedbackMsg" style="font-size: 20px; font-weight: bold; margin-bottom: 20px;"></p>
+    <div class="button-group">
+      <button id="restartBtn" class="btn">Restart Quiz</button>
+      <button id="leaveBtn" class="btn">Leave Quiz</button>
+      <button id="checkAnswersBtn" class="btn">Check Answers</button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Review Page -->
+  <div id="reviewPage" class="page">
+    <div class="wrapper">
+      <h1>Review Answers</h1>
+      <div id="reviewContainer">
+        <!-- Answer review items will be generated dynamically -->
+      </div>
+      <button id="backToResultBtn" class="btn center-btn">Back</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
