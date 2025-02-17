@@ -19,3 +19,4 @@ A simple and interactive quiz application built using HTML, CSS, and JavaScript.
    ```bash
    git clone https://github.com/your-username/quiz-app.git
 
+ Thanks to @TechnoHacks for inspiration and guidance Special thanks to my mentor @Sandip Gavit for his continuous support throughout the project.
