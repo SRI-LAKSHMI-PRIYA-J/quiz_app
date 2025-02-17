@@ -18,5 +18,4 @@ A simple and interactive quiz application built using HTML, CSS, and JavaScript.
 1. Clone this repository:
    ```bash
    git clone https://github.com/your-username/quiz-app.git
-cd quiz-app
-Open index.html in a browser and start playing!
+
